@@ -20,13 +20,13 @@
         "verdict": "Overweight"
     },
     "P003": {
-        "name": "Sneha Kulkarni",
-        "city": "Pune",
-        "age": 22,
+        "name": "Isha Kulkarni",
+        "city": "Nagpur",
+        "age": 26,
         "gender": "female",
-        "height": 1.6,
-        "weight": 45,
-        "bmi": 17.58,
+        "height": 1.65,
+        "weight": 45.0,
+        "bmi": 16.53,
         "verdict": "Underweight"
     },
     "P004": {
@@ -48,15 +48,5 @@
         "weight": 75,
         "bmi": 31.22,
         "verdict": "Obese"
-    },
-    "P006": {
-        "name": "Bishal Pandey",
-        "city": "Guwahati",
-        "age": 24,
-        "gender": "male",
-        "height": 1.88,
-        "weight": 80.0,
-        "bmi": 22.63,
-        "verdict": "Normal"
     }
 }
