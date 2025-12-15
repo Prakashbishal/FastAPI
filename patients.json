@@ -48,5 +48,15 @@
         "weight": 75,
         "bmi": 31.22,
         "verdict": "Obese"
+    },
+    "P006": {
+        "name": "Bishal Pandey",
+        "city": "Guwahati",
+        "age": 24,
+        "gender": "male",
+        "height": 1.88,
+        "weight": 80.0,
+        "bmi": 22.63,
+        "verdict": "Normal"
     }
 }
