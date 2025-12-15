@@ -31,7 +31,7 @@ class Patient(BaseModel):
         elif self.bmi < 25:
             return 'Normal'
         elif self.bmi < 30:
-            return 'Normal'
+            return 'Overweight'
         else:
             return 'Obese'
 
