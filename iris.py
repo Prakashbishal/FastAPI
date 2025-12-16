@@ -11,6 +11,7 @@ df = pd.DataFrame(data=iris.data, columns=iris.feature_names)
 df['target'] = iris.target
 df['flower_name'] = df['target'].apply(lambda i: iris.target_names[i])
 df.head()
+print(df.describe)
 print(df['flower_name'].value_counts())
 # Features (inputs)
 

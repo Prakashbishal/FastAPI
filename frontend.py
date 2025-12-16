@@ -31,10 +31,24 @@ if st.button("Predict"):
             st.error(f"API Error: {response.status_code}")
             st.write(response.text)
             st.stop()
+        if response.status_code == 422:
+            error = response.json()
+            st.error("Invalid input value")
+
+            for e in error["detail"]:
+                field = e["loc"][-1]
+                message = e["msg"]
+                st.warning(f"❌ {field}: {message}")
+            st.stop()
 
         if response.status_code == 200:
             st.success(f"Predicted Flower: **{result['predicted_category_name']}**")
             st.write("Class ID:", result["predicted_category_id"])
+            img = result.get("image_url")
+            if img:
+                st.image(img, caption=f"Iris {result['predicted_category_name']}")
+            else:
+                st.info("No image found from Wikipedia for this class.")
 
             # If you later add probabilities in FastAPI, this will display them
             if "probabilities" in result and result["probabilities"] is not None:
